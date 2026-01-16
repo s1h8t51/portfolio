@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahitya Gantala - Senior Data Engineer & Solutions Architect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: #37352f;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        header {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #000;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #787774;
+            margin-bottom: 24px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .header-links a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .header-links a:hover {
+            text-decoration: underline;
+        }
+
+        .intro {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: #37352f;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e9e9e7;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .skill-category {
+            background: #f7f6f3;
+            padding: 16px;
+            border-radius: 6px;
+        }
+
+        .skill-category h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .skill-category p {
+            font-size: 14px;
+            color: #37352f;
+            line-height: 1.6;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border: 1px solid #e9e9e7;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 12px;
+        }
+
+        .project-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 6px;
+        }
+
+        .project-meta {
+            font-size: 13px;
+            color: #787774;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            font-size: 15px;
+            color: #37352f;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .tag {
+            background: #e9e9e7;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #37352f;
+        }
+
+        .experience-item {
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 8px;
+        }
+
+        .experience-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .experience-company {
+            font-size: 16px;
+            color: #0066cc;
+            margin-bottom: 4px;
+        }
+
+        .experience-date {
+            font-size: 14px;
+            color: #787774;
+        }
+
+        .experience-item ul {
+            margin-left: 20px;
+            margin-top: 12px;
+        }
+
+        .experience-item li {
+            font-size: 15px;
+            color: #37352f;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .contact-section {
+            background: #f7f6f3;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .contact-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 10px 20px;
+            background: white;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .contact-links a:hover {
+            background: #e9e9e7;
+        }
+
+        .highlight {
+            background: #fff8dc;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sahitya Gantala</h1>
+            <p class="subtitle">Senior Data Engineer | Solutions Architect | MS Data Science '25</p>
+            
+            <div class="header-links">
+                <a href="mailto:your.email@example.com">📧 Email</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/yourprofile" target="_blank">💻 GitHub</a>
+                <a href="tel:+1234567890">📱 Phone</a>
+            </div>
+
+            <div class="intro">
+                <p>Senior Data Engineer with <span class="highlight">8+ years of experience</span> building large-scale data platforms and microservices architectures. Recently completed <span class="highlight">MS in Data Science at University at Buffalo (Dec 2025)</span>. Specialized in modernizing legacy systems, data governance, and building scalable cloud-native solutions.</p>
+                <p style="margin-top: 12px;">Currently seeking full-time opportunities in <strong>Data Engineering, Backend Engineering, or Solutions Architecture</strong>. Available to start <strong>February 2026</strong>.</p>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>💼 Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-company">Broadcom (via Deloitte)</div>
+                        <div class="experience-title">Senior Data Engineer & Client Lead</div>
+                    </div>
+                    <div class="experience-date">2021 - 2025</div>
+                </div>
+                <ul>
+                    <li>Led 12+ applications as client lead, managing data engineering operations for enterprise-scale systems</li>
+                    <li>Architected and implemented microservices migration from monolithic platform, improving performance by 40%</li>
+                    <li>Orchestrated zero-downtime migration of 400TB+ data to GCP and Databricks within 48 hours</li>
+                    <li>Built Layer 7 traffic management and API routing strategies, achieving 99.9% uptime</li>
+                    <li>Delivered $400K in receivables recovery through improved data governance and quality</li>
+                    <li>Secured $120K contract extension through successful delivery across 7+ Agile sprints</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-company">Deloitte</div>
+                        <div class="experience-title">Senior Solutions Architect / Data Engineer</div>
+                    </div>
+                    <div class="experience-date">2019 - 2021</div>
+                </div>
+                <ul>
+                    <li>Designed and implemented scalable microservices architecture for enterprise data platforms</li>
+                    <li>Built secure, policy-driven access control and entitlements systems</li>
+                    <li>Developed telemetry pipelines and observability standards for production monitoring</li>
+                    <li>Partnered with cross-functional teams (data engineers, analysts, product managers) to deliver analytics platforms</li>
+                    <li>Mentored junior engineers and conducted technical design reviews</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-company">Genpact</div>
+                        <div class="experience-title">Data Engineer</div>
+                    </div>
+                    <div class="experience-date">2017 - 2019</div>
+                </div>
+                <ul>
+                    <li>Built ETL pipelines and data warehousing solutions using SQL and Python</li>
+                    <li>Developed automated data quality checks and reporting systems</li>
+                    <li>Optimized complex SQL queries reducing processing time by 60%</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🚀 Featured Projects</h2>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Enterprise Microservices Migration</h3>
+                </div>
+                <p class="project-meta">Broadcom / Deloitte | 2023-2024</p>
+                <p>Led end-to-end modernization of a monolithic enterprise platform into scalable microservices architecture. Designed systems for Entitlements, Access Control, Telemetry, and Licensing domains.</p>
+                <p><strong>Impact:</strong> 40% performance improvement, 99.9% uptime, enabled $400K receivables recovery</p>
+                <div class="project-tags">
+                    <span class="tag">Microservices</span>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">REST APIs</span>
+                    <span class="tag">GCP</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Zero-Downtime Data Migration (400TB+)</h3>
+                </div>
+                <p class="project-meta">Broadcom / Deloitte | 2024</p>
+                <p>Orchestrated migration of 400TB+ historical data to GCP and Databricks within 48-hour window using optimized Python pipelines and in-memory processing techniques.</p>
+                <p><strong>Impact:</strong> Zero downtime, data integrity maintained, enabled advanced analytics capabilities</p>
+                <div class="project-tags">
+                    <span class="tag">GCP</span>
+                    <span class="tag">Databricks</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Data Migration</span>
+                    <span class="tag">ETL</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Data Governance & Quality Framework</h3>
+                </div>
+                <p class="project-meta">Deloitte | 2022-2023</p>
+                <p>Established comprehensive data governance framework including data quality standards, lineage tracking, metadata management, and automated quality checks across distributed microservices.</p>
+                <p><strong>Impact:</strong> Reduced data inconsistencies by 70%, enabled self-service analytics</p>
+                <div class="project-tags">
+                    <span class="tag">Data Governance</span>
+                    <span class="tag">Data Quality</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Automation</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Real-time Telemetry & Observability Platform</h3>
+                </div>
+                <p class="project-meta">Deloitte | 2023</p>
+                <p>Designed and implemented telemetry pipelines, monitoring dashboards, and automated alerting systems for production services. Enabled proactive issue detection and resolution.</p>
+                <p><strong>Impact:</strong> 99.9% uptime, 50% reduction in MTTR (Mean Time To Resolution)</p>
+                <div class="project-tags">
+                    <span class="tag">Observability</span>
+                    <span class="tag">Monitoring</span>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">APIs</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🛠️ Technical Skills</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages & Core</h3>
+                    <p>SQL (Expert), Python, REST APIs, JSON, Event-driven processing</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Architecture & Design</h3>
+                    <p>Microservices, API Design, Domain-Driven Design, Service-Oriented Architecture</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Cloud & Platforms</h3>
+                    <p>GCP, AWS, Databricks (Unity Catalog, Medallion Architecture), Kubernetes</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Data Engineering</h3>
+                    <p>ETL/ELT, Data Pipelines, Data Warehousing, Data Modeling, Spark</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Data Governance</h3>
+                    <p>Data Quality, Master Data Management, Metadata Management, Data Lineage</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Operations & Reliability</h3>
+                    <p>Observability, Monitoring, CI/CD, SLA/SLO Design, Production Support</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🎓 Education</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Master of Science in Data Science and Applications</div>
+                        <div class="experience-company">University at Buffalo, SUNY</div>
+                    </div>
+                    <div class="experience-date">Dec 2025</div>
+                </div>
+                <p style="margin-top: 8px; font-size: 15px;">Focus: Machine Learning, Statistical Analysis, Data Mining, Big Data Analytics</p>
+            </div>
+
+            <div class="experience-item" style="border: none; padding-bottom: 0;">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Bachelor of Technology in Electrical & Electronics Engineering</div>
+                        <div class="experience-company">JNTUH College of Engineering</div>
+                    </div>
+                    <div class="experience-date">2017</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🏆 Key Achievements</h2>
+            
+            <div class="project-card">
+                <ul style="margin-left: 0; list-style-position: inside;">
+                    <li>Delivered $400K in receivables recovery through data governance improvements</li>
+                    <li>Secured $120K contract extension and multi-year engagement renewal at Broadcom</li>
+                    <li>Achieved 99.9% uptime for mission-critical microservices</li>
+                    <li>Led client-facing role managing 12+ applications simultaneously</li>
+                    <li>Improved platform performance by 40% through optimization and architecture redesign</li>
+                    <li>Completed 400TB+ data migration with zero downtime</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section contact-section">
+            <h2 style="border: none; text-align: center; padding-bottom: 0;">📬 Let's Connect</h2>
+            <p>I'm actively seeking Data Engineering, Backend Engineering, or Solutions Architecture roles.<br>Available to start February 2026. Open to relocation.</p>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com">Send Email</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a>
+                <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+                <a href="resume.pdf" target="_blank">Download Resume</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
