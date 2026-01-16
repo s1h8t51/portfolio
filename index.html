@@ -51,27 +51,31 @@
         }
 
         /* --- PROFILE PICTURE OVERLAP --- */
-        .profile-section {
-            display: flex;
-            align-items: flex-end;
-            gap: 24px;
-            margin-top: -85px; /* Pulls profile section up over the cover image */
-            margin-bottom: 40px;
-            position: relative;
-            z-index: 10;
-        }
+        /* The container for both the photo and the name */
+.profile-section {
+    display: flex;
+    flex-direction: column; /* Stacks image on top of text */
+    align-items: flex-start; /* Aligns everything to the left */
+    margin-top: -85px; /* Pulls only the photo up into the landscape */
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+}
 
-        .profile-picture {
-            width: 170px;
-            height: 170px;
-            border-radius: 50%;
-            border: 6px solid #ffffff; /* Thick white border like LinkedIn */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            object-fit: cover;
-            background-color: #fff;
-        }
+/* The Circular Photo */
+.profile-picture {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    object-fit: cover;
+    background-color: white;
+    margin-bottom: 15px; /* Creates space between photo and name */
+}
 
-        profile-info {
+/* The Name and Subtitle Area */
+.profile-info {
     padding-left: 5px; /* Aligns text slightly with the photo edge */
 }
 
@@ -86,7 +90,6 @@
     font-size: 18px;
     color: #787774;
 }
-
         header {
             margin-bottom: 60px;
         }
